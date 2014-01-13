@@ -29,10 +29,10 @@ where
 * `values` - an array of javascript objects containing a percentage and a color ``` { percentage: 27, color: "#B7B7EB" }```, the circle will always be completed with a white color.
 
 ##Browser support
-    The library use the `canvas` element, you can check the support on [caniuse](http://caniuse.com/#search=canvas)
+The library use the `canvas` element, you can check the support on [caniuse](http://caniuse.com/#search=canvas)
 
 ##Licence
-    `Circle.js` is licensed under the terms of the MIT License.
+`Circle.js` is licensed under the terms of the MIT License.
 
 ##Inspired from
     * [SVG Circles](https://github.com/lugolabs/circles)
