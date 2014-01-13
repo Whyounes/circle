@@ -8,7 +8,7 @@ Small JavaScript library that generates circular graphs.
 
 Include the JavaScript file in your HTML.
 
-you can call the it with.
+you can call it with.
 
 ```
 new Circle( {
