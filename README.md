@@ -6,7 +6,7 @@ Small JavaScript library that generates circular graphs.
 
 ##Usage
 
-Include the JavaScript file in your HTML.
+Download and include the JavaScript file in your HTML or you can use `bower` package manager `bower install Circle`.
 
 you can call it with.
 
