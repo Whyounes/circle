@@ -2,7 +2,8 @@ window.onload = function(){
     new Circle( {
         id: "php", 
         width: 10, 
-        radius: 60, 
+        radius: 60,
+        shadow: 7,
         text: "6.5", 
         values: [{percent: 65, color: "#99C"}, {percent: 65, color: "#B7B7EB"}]
     } );

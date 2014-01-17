@@ -15,6 +15,7 @@ new Circle( {
     id: "circle",
     width: 10,
     radius: 60,
+    shadow: 7,
     text: "6.5",
     values: [{percent: 65, color: "#99C"}, {percent: 65, color: "#B7B7EB"}]
 } );
@@ -23,8 +24,9 @@ new Circle( {
 where
 
 * `id` - circular chart wrapper element.
-* `radius` - the radius of the circle.
 * `width` - the width of the circle (optional, default 10).
+* `radius` - the radius of the circle.
+* `shadow` - draw a shadow around the circle.
 * `text` - the text to display at the centre of the circle (optional, default blank)
 * `values` - an array of javascript objects containing a percentage and a color ``` { percentage: 27, color: "#B7B7EB" }```, the circle will always be completed with a white color.
 
