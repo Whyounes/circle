@@ -10,6 +10,7 @@ Download and include the JavaScript file in your HTML or you can use `bower` pac
 
 you can call it with.
 
+v1.0.0
 ```
 new Circle( {
     id: "circle",
@@ -20,7 +21,22 @@ new Circle( {
     values: [{percent: 65, color: "#99C"}, {percent: 65, color: "#B7B7EB"}]
 } );
 ```
+v1.1.0
+```
+new Circle( {
+    id: ".circle",
+    width: 10,
+    radius: 60,
+    shadow: 7,
+    text: "6.5",
+    values: [{percent: 65, color: "#99C"}, {percent: 65, color: "#B7B7EB"}]
+} );
+```
+or
 
+```
+Circle.generate( options );
+```
 where
 
 * `id` - circular chart wrapper element.

@@ -1,0 +1,20 @@
+{
+  "name": "Circle",
+  "version": "1.0.0",
+  "dependencies": {},
+  "authors": [
+    "RAFIE Younes <younes.rafie@gmail.com>"
+  ],
+  "description": "Small JavaScript library that generates circular graphs.",
+  "main": [ "circle.js", "circle.min.js" ],
+  "keywords": [
+    "circle",
+    "circular",
+    "chart",
+    "graph",
+    "canvas",
+  ],
+  "license": "MIT",
+  "ignore": "test",
+  "homepage": "https://github.com/Whyounes/circle"
+}

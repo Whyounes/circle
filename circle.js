@@ -11,8 +11,8 @@
     var Circle = window.Circle = function( options ) {
         if( ! options.id || ! options.values || ! Array.isArray( options.values ) ) return; 
         this._id = options.id;
-        this._elem = document.getElementById( this._id );
-        if( ! this._elem ) return;
+        this._elem = document.querySelectorAll( this._id );
+        if( ! this._elem || this._elem.length == 0 ) return;
         //do something if canvas supported
         
         this._stroke = options.width || 10;
@@ -22,14 +22,18 @@
         this._values = options.values;
         this._canvasSize = ( this._radius * 2 ) + ( this._stroke * 2 ) + ( this._shadow * 2 );
         this._x = this._canvasSize / 2;
-        this.canvasHTML = "<canvas id='" + 
-            this._id +"_canvas' width='" + 
+        this.canvasHTML = "<canvas width='" + 
             this._canvasSize + "' height='" + 
             this._canvasSize + "' style='position:relative;z-index:10;'></canvas>";
-        
         this.textHTML = ( ( this._text && this._text != "" ) ? "<span style='z-index:1;position:absolute; top:0;bottom:0;left:0;right:0; text-align:center; font-size:" + ( this._radius * 0.6 ) + "px; line-height:" + this._canvasSize + "px;'>" + this._text +"</span>" : "" );
         
-        this.create();
+        if( this._elem.length > 0 ){
+          this._loop();
+        }
+        else{
+          this._elem = this._elem[0];
+          this.create();
+        }
     };
     
     Circle.prototype = {
@@ -47,7 +51,7 @@
             if( count < 100 )  this._values.push( { percent: ( 100 - count ), color: "#FFF" } );
         },
         drawCircle: function(){
-            this._canvas = document.getElementById( this._id + '_canvas' );
+            this._canvas = this._elem.querySelector("canvas");
             this._context = this._canvas.getContext( "2d" );
             
             var startAngle = 0,
@@ -90,11 +94,25 @@
         _percentToAngle: function( percent ){
             return ( ( ( ( percent / 100 ) * 360 ) * Math.PI ) / 180 );
         },
+        _loop: function(){
+          var elems = this._elem,
+              i = 0,
+              l = elems.length;
+
+          for( ; i < l; i++ ){
+            this._elem = elems.item( i );
+            this.generateHTML();
+            this.drawCircle();
+          }
+        },
         create: function(){
             this.verifyValues();
             this.generateHTML();
             this.drawCircle();
         }
     };
-
+    
+    window.Circle.generate = function( options ){
+      new Circle( options );
+    }
 })();
