@@ -3,7 +3,8 @@
 [![Circle](http://younesrafie.com/images/circle.png)](http://younesrafie.com)
 
 Small JavaScript library that generates circular graphs.
-
+##Demos
+you can see a live demo on the Github page [demo](http://whyounes.github.io/circle/)
 ##Usage
 
 Download and include the JavaScript file in your HTML or you can use `bower` package manager `bower install Circle`.
