@@ -12,7 +12,7 @@
     "circular",
     "chart",
     "graph",
-    "canvas",
+    "canvas"
   ],
   "license": "MIT",
   "ignore": "test",
